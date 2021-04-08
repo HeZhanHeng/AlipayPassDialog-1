@@ -207,8 +207,8 @@ public class PayPassView extends RelativeLayout {
                         }
                         else {
                             strPass=strPass+listNumber.get(position);//得到当前数字并累加
-                            mTvPass[strPass.length()-1].setText("*"); //设置界面*
-                            //输入完成
+//                            mTvPass[strPass.length()-1].setText("*"); //设置界面*
+                            mTvPass[strPass.length()-1].setText(listNumber.get(position)+"");//设置界面可见
                             if(strPass.length()==6){
                                 mPayClickListener.onPassFinish(strPass);//请求服务器验证密码
                             }
